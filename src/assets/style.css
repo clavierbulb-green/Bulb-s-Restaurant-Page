@@ -10,6 +10,7 @@ html {
 
 body {
   margin: 0;
+  overflow: hide;
   font-family: 'Open Sans', sans-serif;
   background-color: rgb(255, 253, 231);
 }
@@ -66,38 +67,53 @@ header {
 
   display: flex;
   flex-direction: row;
-
+  flex-wrap: wrap;
+  justify-content: space-around;
   font-size: calc(0.6rem + 5vmin);
   padding: 0;
   margin-top: 0.8rem;
+  background-color: rgba(207, 234, 137, 0.1);
 }
 
 .head-nav ul li {
   padding: 0 0.6rem;
-  text-shadow: 1px 1px 8px rgba(43, 56, 9, 1);
-  background-color: rgba(207, 234, 137, 0.1);
+  text-shadow: 2px 2px 8px rgba(43, 56, 9, 1);
   transition: background-color 250ms ease-in-out;
 }
 
-.head-nav ul li:active,
-.head-nav ul li:hover {
-  background-color: rgba(207, 234, 137, 0.7);
+.tab:active,
+.tab:hover {
+  background-color: rgba(107, 180, 44, 0.4);
+}
+
+.tab.current {
+  background-color: rgba(58, 149, 28, 0.6);
+}
+
+.tab.current:active,
+.tab.current:hover {
+  background-color: rgba(58, 149, 28, 0.8);
 }
 
 
 /* || MAIN COPY*/
 .copy-greeting {
-  font-size: calc(1.5em + 5vmin);
+  font-size: calc(1.2em + 4vw);
   letter-spacing: 0.4rem;
   text-transform: uppercase;
-  color: white;
-  text-shadow: 1px 1px 8px rgba(43, 56, 9, 1);
+  text-align: center;
+  margin-bottom: 0.6rem;
 }
 
 main, footer {
   margin: 1rem;
+  margin-left: 0.4rem;
 }
 
 main {
   font-size: 1.1rem;
+}
+
+footer {
+  margin-top: 2rem;
 }

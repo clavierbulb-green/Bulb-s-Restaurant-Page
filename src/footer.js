@@ -1,9 +1,8 @@
-const footer = (app) => {
-  /*create footer */
+const footer = (app, citation) => {
   const footer = document.createElement("footer");
-  const imgCitation = document.createElement("cite");
-  imgCitation.textContent = "Photo by Jakub Kapusnak on Unsplash";
-  footer.appendChild(imgCitation);
+  const cite = document.createElement("cite");
+  cite.textContent = citation;
+  footer.appendChild(cite);
   app.appendChild(footer);
 }
 

@@ -2,13 +2,14 @@ import header from "./header";
 import footer from "./footer";
 
 const init = (app) => {
-  /* parametrize (send tab names to header) */
-  header(app);
-  
+  const TITLE = "Bulb's";
+  const TABS = ["home", "about", "contact", "menus"]
+  const CITATION = "Photo by Jakub Kapusnak on Unsplash";
   const main = document.createElement("main");
-  app.appendChild(main);
 
-  footer(app);
+  header(app, TITLE, TABS);
+  app.appendChild(main);
+  footer(app, CITATION);
 }
 
 export default init

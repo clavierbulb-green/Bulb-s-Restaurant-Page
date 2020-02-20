@@ -1,39 +1,37 @@
-const header = (app) => {
+const header = (app, title, tabs) => {
 
-  /* create header */
-  const header = document.createElement("header");
+  const hdr = document.createElement("header");
 
   const headline = document.createElement("h1");
   headline.classList.add("headline");
   headline.classList.add("heading");
-  headline.textContent = "Bulb's";
+  headline.textContent = title;
+  hdr.appendChild(headline);
 
   const nav = document.createElement("nav");
   nav.classList.add("head-nav");
   
   const navList = document.createElement("ul");
-  const aboutTab = document.createElement("li");
-  aboutTab.setAttribute("id", "about-tab");
-  aboutTab.textContent = "About";
 
-  const contactTab = document.createElement("li");
-  contactTab.setAttribute("id", "contact-tab");
-  contactTab.textContent = "Contact";
+  tabs.forEach(tabName => {
+    const tab = document.createElement("li");
+    tab.classList.add("tab");
+    if (tabName === "home") {
+      tab.classList.add("current");
+    }
+    tab.dataset.name = tabName;
 
-  const menusTab = document.createElement("li");
-  menusTab.setAttribute("id", "menus-tab");
-  menusTab.textContent = "Menus";
-
-  navList.appendChild(aboutTab);
-  navList.appendChild(contactTab);
-  navList.appendChild(menusTab);
+    const tabLink = document.createElement("a"); 
+    tabLink.classList.add("tab-link");
+    tabLink.textContent = tabName;
+    tab.appendChild(tabLink);
+    navList.appendChild(tab);
+  });
 
   nav.appendChild(navList);
+  hdr.appendChild(nav);
 
-  header.appendChild(headline);
-  header.appendChild(nav);
-
-  app.appendChild(header);
+  app.appendChild(hdr);
 }
 
 export default header
