@@ -1,0 +1,103 @@
+/* || RESET */
+html {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgb(255, 253, 231);
+}
+
+.heading {
+  font-family: 'Sacramento', cursive;
+}
+
+
+/* || HEADER */
+header {
+  color: #F5F5F5;
+
+  height: 100vh;
+
+  background-image: url("images/dish-on-plate.jpg");
+  background-size: cover;
+
+  padding: calc(0.3rem + 3vmin);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: -0.8rem;
+}
+
+.headline {
+  font-size: calc(4.6rem + 4vmin);
+  letter-spacing: 0.6rem;
+  background-color: rgba(207,234,137,0.3);
+  text-shadow: 1px 1px 8px rgba(43,56,9,1);
+  border-bottom: 0.2em solid rgba(255,255,255,0.5);
+  margin-bottom: 0;
+}
+
+@media (min-width: 450px) {
+  .headline::after {
+    content: "💡";
+  }
+}
+
+@media (orientation: portrait) and (max-width: 450px) {
+  .headline::after {
+    content: "💡";
+    position: absolute;
+    left: 35%;
+    top: 55%;
+  }
+}
+
+.head-nav ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+
+  font-size: calc(0.6rem + 5vmin);
+  padding: 0;
+  margin-top: 0.8rem;
+}
+
+.head-nav ul li {
+  padding: 0 0.6rem;
+  text-shadow: 1px 1px 8px rgba(43, 56, 9, 1);
+  background-color: rgba(207, 234, 137, 0.1);
+  transition: background-color 250ms ease-in-out;
+}
+
+.head-nav ul li:active,
+.head-nav ul li:hover {
+  background-color: rgba(207, 234, 137, 0.7);
+}
+
+
+/* || MAIN COPY*/
+.copy-greeting {
+  font-size: calc(1.5em + 5vmin);
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 1px 1px 8px rgba(43, 56, 9, 1);
+}
+
+main, footer {
+  margin: 1rem;
+}
+
+main {
+  font-size: 1.1rem;
+}
