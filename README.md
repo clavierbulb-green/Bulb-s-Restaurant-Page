@@ -1,9 +1,9 @@
-# Bulb's - A Sample Restaurant Page
+# [Bulb's - A Sample Restaurant Page](https://clavierbulb-green.github.io/Bulb-s-Restaurant-Page/)
 
 ![Mobile view of restaurant page](preview/screenshot_mobile.png)
 
 ---
-A dynamically rendered home page for a fictional restaurant. Written to practice
+A dynamically rendered home page for a fictitious restaurant. Written to practice
 DOM manipulation and ES6 modules in Javascript, and responsive design in CSS.
 
 Written as a solution to [Project:Restaurant Page](https://www.theodinproject.com/courses/javascript/lessons/restaurant-page) by the [Odin Project](https://www.theodinproject.com/home).
